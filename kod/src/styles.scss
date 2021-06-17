@@ -1,0 +1,67 @@
+@use '~@angular/material' as mat;
+@use '~@angular/material/theming';
+
+$tablet-breakpoint: 610px;
+$phone-breakpoint: 400px;
+
+$app-typography-desktop: mat.define-typography-config(
+	$font-family: Muli,
+	$display-3: mat.define-typography-level(58px, 1),
+	$headline: mat.define-typography-level(48px, 1.5),
+	$title: mat.define-typography-level(34px, 1.5),
+	$body-1: mat.define-typography-level(24px, 1.5)
+);
+$app-typography-tablet: mat.define-typography-config(
+	$font-family: Muli,
+	$display-3: mat.define-typography-level(36px, 1),
+	$headline: mat.define-typography-level(30px, 1.5),
+	$title: mat.define-typography-level(26px, 1.5),
+	$body-1: mat.define-typography-level(20px, 1.5)
+);
+$app-typography-phone: mat.define-typography-config(
+	$font-family: Muli,
+	$display-3: mat.define-typography-level(28px, 1),
+	$headline: mat.define-typography-level(20px, 1.5),
+	$title: mat.define-typography-level(18px, 1.5),
+	$body-1: mat.define-typography-level(14px, 1.5)
+);
+
+@media screen and (min-width: $tablet-breakpoint) {
+	@include mat.core($app-typography-desktop);
+}
+@media screen and (min-width: $phone-breakpoint) and (max-width: $tablet-breakpoint - 1) {
+	@include mat.core($app-typography-tablet);
+}
+@media screen and (max-width: $phone-breakpoint - 1) {
+	@include mat.core($app-typography-phone);
+}
+
+p, ul, ol {
+	// No other way to override this globally
+	// https://github.com/angular/components/issues/14240
+	margin-bottom: 30px !important;
+}
+li + li {
+	margin-top: 10px;
+}
+ul {
+	list-style-type: disc;
+}
+
+body { 
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px 20px;
+	max-width: 1000px;
+}
+
+a {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	user-select: none;
+}
+a:hover {
+	color: #777;
+}

@@ -1,0 +1,44 @@
+@use '~@angular/material' as mat;
+
+#title {
+	margin-top: 44px;
+	margin-bottom: 44px;
+	// margin-left: 50px;
+	text-align: center;
+}
+
+#images {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 16px;
+	img {
+		height: 170px;
+		margin: 8px 10px;
+	}
+}
+
+#nav-container {
+	display: flex;
+	flex-direction: column;
+	@include mat.elevation(2, #ccc);
+	border-radius: 8px;
+	// border-radius: 0 0 8px 8px;
+	border: 5px rgb(255, 146, 197) solid;
+	// border-top: none;
+	background-color: rgb(255, 232, 239);
+	margin-bottom: 40px;
+}
+
+#nav-horizontal {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0px 15px;
+	app-nav-item {
+		flex-grow: 1;
+		text-align: center;
+	}
+}
