@@ -15,6 +15,7 @@ import { BlanketterComponent } from './blanketter/blanketter.component';
 import { PersonalComponent } from './personal/personal.component';
 import { GdprComponent } from './gdpr/gdpr.component';
 import { LinksComponent } from './links/links.component';
+import { FormFileComponent } from './form-file/form-file.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { LinksComponent } from './links/links.component';
     PersonalComponent,
     GdprComponent,
     LinksComponent,
+    FormFileComponent,
   ],
   imports: [
     BrowserModule,

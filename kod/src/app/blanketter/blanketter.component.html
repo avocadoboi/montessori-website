@@ -1,0 +1,6 @@
+<h1>Blanketter för nedladdning</h1>
+<p>Nedan finns blanketter till vårdnadshavare som kan laddas ner och skrivas ut.</p>
+
+<div id="forms-container">
+	<app-form-file *ngFor='let file of formFiles' [formFile]='file'></app-form-file>
+</div>

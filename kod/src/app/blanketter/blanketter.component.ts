@@ -1,14 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { formFiles } from '../forms';
 
 @Component({
-  templateUrl: './blanketter.component.html',
-  styleUrls: ['./blanketter.component.scss']
+	templateUrl: './blanketter.component.html',
+	styleUrls: ['./blanketter.component.scss']
 })
-export class BlanketterComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class BlanketterComponent {
+	formFiles = formFiles;
 }

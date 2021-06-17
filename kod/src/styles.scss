@@ -57,11 +57,19 @@ body {
 }
 
 a {
+	color: rgb(210, 0, 160);
 	display: inline-block;
-	color: black;
 	text-decoration: none;
 	user-select: none;
 }
 a:hover {
-	color: #777;
+	color: rgb(210, 0, 160, 0.7);
 }
+
+.black-link {
+	color: black;
+}
+.black-link:hover {
+	color: #555;
+}
+

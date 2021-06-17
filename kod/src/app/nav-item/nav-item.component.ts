@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './nav-item.component.html',
   styleUrls: ['./nav-item.component.scss']
 })
-export class NavItemComponent {
-}
+export class NavItemComponent {}
