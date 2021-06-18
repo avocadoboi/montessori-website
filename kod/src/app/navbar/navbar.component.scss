@@ -14,15 +14,18 @@
 	flex-wrap: wrap;
 	margin-top: 16px;
 	img {
-		height: 170px;
+		height: min(30vw, 300px);
 		margin: 8px 10px;
+		border-radius: 5px;
+		// border: 1px black solid;
+		@include mat.elevation(2, #aaa);
 	}
 }
 
 #nav-container {
 	display: flex;
 	flex-direction: column;
-	@include mat.elevation(2, #ccc);
+	// @include mat.elevation(2, #aaa);
 	border-radius: 8px;
 	// border-radius: 0 0 8px 8px;
 	border: 5px rgb(255, 146, 197) solid;

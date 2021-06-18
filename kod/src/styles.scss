@@ -28,12 +28,34 @@ $app-typography-phone: mat.define-typography-config(
 
 @media screen and (min-width: $tablet-breakpoint) {
 	@include mat.core($app-typography-desktop);
+	body {
+		padding: 0px 20px;
+	}
+	#content {
+		margin: 0px 32px;
+	}
 }
 @media screen and (min-width: $phone-breakpoint) and (max-width: $tablet-breakpoint - 1) {
 	@include mat.core($app-typography-tablet);
+	body {
+		padding: 0px 10px;
+	}
+	#content {
+		margin: 0px 16px;
+	}
 }
 @media screen and (max-width: $phone-breakpoint - 1) {
 	@include mat.core($app-typography-phone);
+	body {
+		padding: 0px 5px;
+	}
+	#content {
+		margin: 0px 8px;
+	}
+}
+
+#content {
+	margin-bottom: 64px;
 }
 
 p, ul, ol {
@@ -52,7 +74,6 @@ body {
 	margin: 0;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0px 20px;
 	max-width: 1000px;
 }
 
