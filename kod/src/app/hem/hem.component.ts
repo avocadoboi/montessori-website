@@ -1,8 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+
+import { ContentLoaderService } from '../content-loader.service';
 
 @Component({
-  selector: 'app-hem',
-  templateUrl: './hem.component.html',
-  styleUrls: ['./hem.component.scss']
+	template: "<div [innerHtml]='content | async'></div>",
+	styleUrls: ['./hem.component.scss'],
+	encapsulation: ViewEncapsulation.None
 })
-export class HemComponent {}
+export class HemComponent {
+	content = this.loader.loadHtmlContent('hem');
+	
+	constructor(private loader: ContentLoaderService) {}
+}

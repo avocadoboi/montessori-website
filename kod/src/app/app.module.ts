@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
@@ -16,28 +17,30 @@ import { PersonalComponent } from './personal/personal.component';
 import { GdprComponent } from './gdpr/gdpr.component';
 import { LinksComponent } from './links/links.component';
 import { FormFileComponent } from './form-file/form-file.component';
+import { ContentLoaderService } from './content-loader.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HemComponent,
-    NavItemComponent,
-    PedagogikComponent,
-    BlanketterComponent,
-    PersonalComponent,
-    GdprComponent,
-    LinksComponent,
-    FormFileComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatRippleModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		NavbarComponent,
+		HemComponent,
+		NavItemComponent,
+		PedagogikComponent,
+		BlanketterComponent,
+		PersonalComponent,
+		GdprComponent,
+		LinksComponent,
+		FormFileComponent,
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		HttpClientModule,
+		BrowserAnimationsModule,
+		MatButtonModule,
+		MatRippleModule,
+	],
+	providers: [ContentLoaderService],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

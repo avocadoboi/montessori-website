@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormFile } from '../forms';
+import { FormFile } from '../form-file';
 
 @Component({
 	selector: 'app-form-file',

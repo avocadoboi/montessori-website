@@ -1,7 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { ContentLoaderService } from '../content-loader.service';
 
 @Component({
-  templateUrl: './pedagogik.component.html',
-  styleUrls: ['./pedagogik.component.scss']
+	template: "<div [innerHtml]='content | async'></div>",
+	styleUrls: ['./pedagogik.component.scss'],
+	encapsulation: ViewEncapsulation.None
 })
-export class PedagogikComponent {}
+export class PedagogikComponent {
+	content = this.loader.loadHtmlContent('pedagogik');
+	
+	constructor(private loader: ContentLoaderService) {}
+}

@@ -1,7 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { ContentLoaderService } from '../content-loader.service';
 
 @Component({
-  templateUrl: './personal.component.html',
-  styleUrls: ['./personal.component.scss']
+	template: "<div [innerHtml]='content | async'></div>",
+	styleUrls: ['./personal.component.scss'],
+	encapsulation: ViewEncapsulation.None
 })
-export class PersonalComponent {}
+export class PersonalComponent {
+	content = this.loader.loadHtmlContent('personal');
+	
+	constructor(private loader: ContentLoaderService) {}
+}

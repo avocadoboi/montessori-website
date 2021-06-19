@@ -1,8 +1,7 @@
 <a class='mat-display-3 black-link' id='title' routerLink='/'>Montessoriförskolan Kaprifolen</a>
 <div id='nav-container'>
 	<div id='images'>
-		<img src='assets/bild_0.jpg'/>
-		<img src='assets/bild_1.jpg'/>
+		<img *ngFor='let name of imageIds' src='assets/bilder/{{name}}.jpg'/>
 	</div>
 	<div id='nav-horizontal'>
 		<app-nav-item routerLink='/'>Hem</app-nav-item>

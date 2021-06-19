@@ -1,7 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { ContentLoaderService } from '../content-loader.service';
 
 @Component({
-  templateUrl: './gdpr.component.html',
-  styleUrls: ['./gdpr.component.scss']
+	template: "<div [innerHtml]='content | async'></div>",
+	styleUrls: ['./gdpr.component.scss'],
+	encapsulation: ViewEncapsulation.None
 })
-export class GdprComponent {}
+export class GdprComponent {
+	content = this.loader.loadHtmlContent('gdpr');
+	
+	constructor(private loader: ContentLoaderService) {}
+}
