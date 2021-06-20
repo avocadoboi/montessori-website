@@ -1,4 +1,4 @@
-# Montessoriförskolan Kaprifolen
+# Om förskolan
 Förskolan grundades 1992 som en av Uddevallas första montessoriförskolor och ligger vid
 Skansberget centralt i Uddevalla. Förskolan drivs som ett personalkooperativ vilket här
 innebär att rektor samt två förskollärare med montessoriutbildning sitter i styrelsen.
