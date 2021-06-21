@@ -18,8 +18,8 @@
 	overflow: hidden;
 	img {
 		position: relative;
-		height: 73%;
-		margin: 20px 10px;
+		height: 77%;
+		margin: 25px 10px;
 		margin-bottom: 100px;
 		border-radius: 5px;
 		// border: 2px rgb(255, 140, 200) solid;
@@ -37,10 +37,9 @@
 	// border-radius: 0 0 8px 8px;
 	// border-top: none;
 
-	// border: 5px rgb(53, 150, 255) solid;
-	// background-color: rgb(255, 230, 240);
-	background-color: rgb(18, 107, 202);
-
+	border: 5px rgb(53, 150, 255) solid;
+	background-color: rgb(255, 230, 240);
+	// background-color: rgb(18, 107, 202);
 	
 	margin-bottom: 40px;
 }
@@ -51,8 +50,8 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 0px 15px;
-	border-radius: 8px;
-	background-color: rgb(50, 150, 255);
+	// border-radius: 8px;
+	// background-color: rgb(50, 150, 255);
 
 	app-nav-item {
 		flex-grow: 1;
