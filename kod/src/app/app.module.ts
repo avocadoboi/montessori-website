@@ -18,6 +18,7 @@ import { GdprComponent } from './gdpr/gdpr.component';
 import { LinksComponent } from './links/links.component';
 import { FormFileComponent } from './form-file/form-file.component';
 import { ContentLoaderService } from './content-loader.service';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
 	declarations: [
@@ -31,6 +32,7 @@ import { ContentLoaderService } from './content-loader.service';
 		GdprComponent,
 		LinksComponent,
 		FormFileComponent,
+		ContactComponent,
 	],
 	imports: [
 		BrowserModule,
